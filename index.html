@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q3 Seatwork 2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+       body{
+           font-family: Rockwell;
+           background-color: #000000;
+       }
+       span{
+           font-size: 40px;
+           color: #2596be;
+       }
+       #kalu{
+           margin-top: 60px;
+           height: 370px;
+           width: 530px;
+       }
+       #box{
+           border: 2px solid white;
+       }
+       #numX, #numY{
+           background-color: black;
+           color: white;
+           font-size: 30px;
+       }
+       #info{
+           height: 35px;
+           width:35px;
+       }
+       #gFonts{
+           font-family: 'Audiowide', sans-serif;
+           color: #000000;
+       }
+       #gFontsTitle{
+        font-family: 'Audiowide', sans-serif;
+        color: #FFFFFF;
+       }
+       .roundedDiv{
+        border-radius: 15px;
+        overflow: hidden;
+       }
+       .roundedDiv button {
+        border-radius: 15px; /* Ensures buttons inside are also rounded */
+       }
+    </style>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Caveat:wght@400..700&family=Fondamento:ital@0;1&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" id="box">
+                <h3 id="gFontsTitle">Hello I am the very sigma <span>Mr. Beast</span>. Let's test your rizz skill. <br><br> Given:</h3>
+                <h5>
+                    <form class="form-group">
+                        <label id="gFontsTitle">Value of <kbd>a</kbd>:</label><br><br>
+                        <input class="form-control btn-default" type="number" id="numA">
+                        <br>
+                        <label id="gFontsTitle">Value of <kbd>b</kbd>:</label><br><br>
+                        <input class="form-control btn-default" type="number" id="numB">
+                        <br><br>
+                    </form>
+                </h5>
+            </div>
+            <div class="col-md-5">
+                <img src="mr_beast.jpg" id="kalu">
+            </div>
+        </div>
+    </div>
+    <script>
+        function product(){
+            var numA=document.getElementById("numA").value;
+            var numB=document.getElementById("numB").value;
+            var prod=numA * numB;
+            window.alert('The product of a and b is ' + prod );
+        }
+        function power(){
+            var numA=document.getElementById("numA").value;
+            var numB=document.getElementById("numB").value;
+            var exp=numA ** numB;
+            window.alert('a raised to b is ' + exp );
+        }
+        function remainder(){
+            var numA=document.getElementById("numA").value;
+            var numB=document.getElementById("numB").value;
+            var mod=numA % numB;
+            window.alert('The remainder is ' + mod );
+        }
+        function compare(){
+            var numA=document.getElementById("numA").value;
+            var numB=document.getElementById("numB").value;
+            var comp=Number(numA) == Number(numB);
+            window.alert('Is a equal to b? Answer: ' + comp );
+        }
+        function message() {
+            alert("Let's go!");
+        }
+    </script>
+    <br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 d-grid roundedDiv">
+                <button onclick="product()" type="submit" id="gFonts">Multiply a(b)</button>
+            </div>
+            <div class="col-md-6 d-grid roundedDiv">
+                <button onclick="power()" type="submit" id="gFonts">Exponent a^b</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6 d-grid roundedDiv">
+                <button onclick="remainder()" type="submit" id="gFonts">Remainder</button>
+            </div>
+            <div class="col-md-6 d-grid roundedDiv">
+                <button onclick="compare()" type="submit" id="gFonts">a=b</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
